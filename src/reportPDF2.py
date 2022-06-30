@@ -8,7 +8,7 @@ from fpdf import FPDF
 
 # Reading input files
 path = os.path.dirname(__file__)
-Input_path = path+"/20220201-143409_UserName_24_capture_xlsx.xlsx"
+Input_path = path+"/src/input/dataStream.xlsx"
 df = pd.read_excel(Input_path, sheet_name='Sheet1')
 
 # Creating variables
@@ -65,7 +65,7 @@ pdf.cell(190, 10, txt='Informação geral', ln=1, align="L", fill=True)
 # Text box of general information items
 pdf.set_font("Arial", size=10, style='B')
 pdf.cell(190, 5, txt='Data e horário de avaliação:', ln=1, align="L", fill=True)
-pdf.cell(190, 5, txt='Mergulhador avaliado:', ln=1, align="L", fill=True)
+pdf.cell(190, 5, txt='Usuário avaliado:', ln=1, align="L", fill=True)
 pdf.cell(190, 5, txt='Idade:', ln=1, align="L", fill=True)
 
 
