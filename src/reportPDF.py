@@ -7,7 +7,7 @@ import os
 
 def GeneratePDF():
 
-    dataFrame = pd.read_excel(os.path.dirname(__file__) + "/20220201-143409_UserName_24_capture_xlsx.xlsx")
+    dataFrame = pd.read_excel(os.path.dirname(__file__) + "/src/input/dataStream.xlsx")
     """
     dataFrame['ID'] = id
     dataFrame['HR'] = hr
@@ -30,7 +30,7 @@ def GeneratePDF():
     df['Charles'] = [3, 4, 5, 3]
     df['Mike'] = [3, 3, 4, 4]
 
-    title("Monitoramento parâmetros fisiológicos")
+    title("Monitoring physiological parameters")
 
     xlabel('Question Number')
     ylabel('Score')
@@ -57,7 +57,7 @@ def GeneratePDF():
     pdf.set_font('arial', 'B', 12)
     pdf.cell(20)
     #pdf.cell(75, 10, "", 1, 2, 'C')
-    pdf.cell(75, 10, "Monitoramento parâmetros fisiológicos", 1, 2, 'C')
+    pdf.cell(75, 10, "Monitoring physiological parameters", 1, 2, 'C')
 
     # Blank line
     pdf.cell(ln=1, h=5.0, align='L', w=0, txt="", border=0)
@@ -65,11 +65,11 @@ def GeneratePDF():
 
 
     pdf.set_font('arial', 'B', 10)
-    pdf.cell(20, 10, "Informação geral", 0, 2, 'L')
+    pdf.cell(20, 10, "General information", 0, 2, 'L')
     pdf.set_font('arial', 'B', 8)
-    pdf.cell(20, 10, "Data e horário de avaliação:", 0, 2, 'L')
-    pdf.cell(20, 10, "Mergulhador avaliado:", 0, 2, 'L')
-    pdf.cell(20, 10, "Idade:", 0, 2, 'L')
+    pdf.cell(20, 10, "Assessment date and time:", 0, 2, 'L')
+    pdf.cell(20, 10, "User:", 0, 2, 'L')
+    pdf.cell(20, 10, "Age:", 0, 2, 'L')
 
     #pdf.cell(20, 10, 'Title', 1, 1, 'C')
 
