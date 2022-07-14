@@ -7,7 +7,7 @@ import os
 
 def GeneratePDF():
 
-    dataFrame = pd.read_excel(os.path.dirname(__file__) + "/src/input/dataStream.xlsx")
+    dataFrame = pd.read_excel(os.path.dirname(__file__) + "/input/dataSample.xlsx")
     """
     dataFrame['ID'] = id
     dataFrame['HR'] = hr
@@ -43,9 +43,11 @@ def GeneratePDF():
     axis([0, 10, 0, 8])
     savefig('barchart.png')
 
+    # PDF creation
     pdf = FPDF()
     pdf.add_page()
     pdf.set_xy(0, 0)
+
     # Page Lineborders
     pdf.set_line_width(0.0)
     pdf.line(5.0,5.0,205.0,5.0) # top one

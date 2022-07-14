@@ -8,7 +8,7 @@ from fpdf import FPDF
 
 # Reading input files
 path = os.path.dirname(__file__)
-Input_path = path+"/src/input/dataStream.xlsx"
+Input_path = path+"/input/dataSample.xlsx"
 df = pd.read_excel(Input_path, sheet_name='Sheet1')
 
 # Creating variables
